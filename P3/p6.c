@@ -36,4 +36,12 @@ int main(void) {
 NOTA MUITO IMPORTANTE:nesta situação,não altere o número de iterações do ciclo for para um número superior a 4 ou 5;
 devido ao crescimento exponencial do número de processos com o número de iterações,a realização de um número
 não muito elevado de iterações pode facilmente esgotar o número máximo de processos que tem permissão para 
-executar;esse valor é especificado por RLIMIT_NPROC que poderá obter usando a chamada getrlimit*/
+executar;esse valor é especificado por RLIMIT_NPROC que poderá obter usando a chamada getrlimit
+
+c)O processo pai vai estar infinitamente à espera que o processo filho termine porque nao vai receber um retorno dele, tal 
+acontece porque está a ser utilizado o wait
+
+
+
+
+*/

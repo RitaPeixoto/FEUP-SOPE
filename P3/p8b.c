@@ -21,7 +21,7 @@ int main(int argc, char *argv[], char *envp[]) {
          printf("My child is going to execute command              \"ls -laR %s\"\n", argv[1]);    
     }
     else if (pid == 0){      //Child process
-        execl("/bin/ls","/bin/ls","-laR",argv[1],NULL);      
+        execl("ls","/bin/ls","-laR",argv[1],NULL);      
         printf("Command not executed !\n");      
         exit(1);    
     }    

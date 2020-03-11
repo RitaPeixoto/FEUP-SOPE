@@ -1,0 +1,22 @@
+.:
+total 88
+drwxr-xr-x 2 rita rita 4096 mar 11 09:38 .
+drwxr-xr-x 6 rita rita 4096 mar  7 16:00 ..
+-rwxr-xr-x 1 rita rita 8696 mar 11 09:38 hello
+-rw-r--r-- 1 rita rita  941 mar 11 09:38 hey.txt
+-rw-rw-r-- 1 rita rita  984 mar 11 09:38 p10.c
+-rw-rw-r-- 1 rita rita  713 mar  4 09:10 p1.c
+-rw-rw-r-- 1 rita rita  965 mar  4 09:30 p2.c
+-rw-rw-r-- 1 rita rita 1141 mar  4 09:34 p3.c
+-rw-rw-r-- 1 rita rita  408 mar  4 09:47 p4a.c
+-rw-rw-r-- 1 rita rita  502 mar  4 09:51 p4b.c
+-rw-rw-r-- 1 rita rita  643 mar  4 10:02 p5.c
+-rw-rw-r-- 1 rita rita 1936 mar  7 16:06 p6.c
+-rw-rw-r-- 1 rita rita  389 mar  7 16:12 p7.c
+-rw-rw-r-- 1 rita rita  752 mar  7 16:31 p8a.c
+-rw-rw-r-- 1 rita rita  756 mar 11 08:53 p8b.c
+-rw-rw-r-- 1 rita rita  779 mar  7 16:41 p8c.c
+-rw-rw-r-- 1 rita rita  783 mar 11 08:53 p8d.c
+-rw-rw-r-- 1 rita rita  789 mar 11 08:53 p8e.c
+-rw-rw-r-- 1 rita rita 1107 mar 11 09:18 p9a.c
+-rw-rw-r-- 1 rita rita 1473 mar 11 09:20 p9b.c

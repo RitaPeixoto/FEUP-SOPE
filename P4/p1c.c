@@ -1,16 +1,18 @@
-//Programa p1.c
+//Programa p1c.c
 #include <stdio.h> 
 #include <signal.h> 
 #include <unistd.h> 
 #include <stdlib.h> 
 void sigint_handler(int signo) {   //signal handler, called every time the process receives the signal with which is invoked
     printf("In SIGINT handler ...\n"); 
-    //printf("Let's sleep\n");
-    sleep(30); // b)
-    //printf("Done\n");
+    sleep(30);
     } 
 int main(void) {   
-    if (signal(SIGINT,sigint_handler) < 0) { //if the process receives a SIGINT signal, sigint_handler is called    
+    struct sigaction action;
+    action.sa_handler= sigint_handler;
+    sigemptyset (&action.sa_mask);
+    action.sa_flags = 0:
+    if (sigaction(SIGINT,&action,NULL) < 0) { //if the process receives a SIGINT signal, sigint_handler is called    
         fprintf(stderr,"Unable to install SIGINT handler\n");//case of error     
         exit(1);   
     }   
@@ -19,9 +21,3 @@ int main(void) {
     printf("Waking up ...\n");   
     exit(0); 
 }
-
-/*
-a) In the first situation (using CRTL+C), the return value is 0
-
-
-*/

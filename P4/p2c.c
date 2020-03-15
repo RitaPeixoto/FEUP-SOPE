@@ -10,7 +10,7 @@ void sigint_handler(int signo) {
 }
 
 
-int main(void) {  
+int main(void) {        
     struct sigaction action;  
     action.sa_handler = sigint_handler;  
     sigemptyset(&action.sa_mask);  
@@ -19,8 +19,20 @@ int main(void) {
         fprintf(stderr,"Unable to install SIGINT handler\n");        
         exit(1);  
     }  
+
+    if(sigaction(SIGTERM, &action, NULL)<0){
+        fprintf(stderr,"Unable to install SIGTERM handler\n");        
+        exit(2);  
+    }
+
     printf("Try me with CTRL-C ...\n");  
     while(1) 
-        pause();  
+        pause();  //it will only pause if a signal that has not been ignored  has a handler 
     exit(0); 
 } 
+
+
+/*
+We can use the same handler since we want to do the same thing
+
+*/

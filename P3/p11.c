@@ -9,7 +9,7 @@
 
 #define COMMAND_SIZE 250
 #define MAX_NUM_COMMANDS 15
-//versao da autoria do Seixas ;)
+//versao do Seixas ;)
 
 void divide_tokens(char* tokens[MAX_NUM_COMMANDS] , char command[COMMAND_SIZE] , int* numCommands) {
 	const char delim[] = " ";
@@ -58,10 +58,9 @@ int main(void)
 
     while (strcmp(command,"quit") != 0) {
         pid=fork();
-        if (pid > 0) { // COMMENT THE 2 LINES BELOW TO SEE THE ZOMBIES
+        if (pid > 0) { 
             pid_terminated = wait(&status);
-            printf("PARENT: son %d terminated with exit code %d\n",
-            pid_terminated,WEXITSTATUS(status));
+            printf("PARENT: son %d terminated with exit code %d\n",pid_terminated,WEXITSTATUS(status));
         }
         else {
             divide_tokens(tokens, command, &numCommands);

@@ -1,4 +1,4 @@
-//Programa p3.c
+//Programa p3b.c
 #include <stdio.h> 
 #include <signal.h> 
 #include <unistd.h> 

@@ -1,4 +1,4 @@
-//Programa p5.c
+//Programa p5a.c
 #include <stdio.h> 
 #include <signal.h> 
 #include <unistd.h> 

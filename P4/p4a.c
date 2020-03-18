@@ -1,4 +1,4 @@
-//Programa p4.c
+//Programa p4a.c
 #include <stdio.h> 
 #include <signal.h> 
 #include <unistd.h> 
@@ -53,10 +53,9 @@ The output of this program is:
     PARENT: working hard (task no. 4) ...
     PARENT: end of task no. 4
     PARENT: waiting for child no. 4 ...
+inconveniences:
 
-We can notice something is wrong because:
-    The child number 2 starts working before child no 1
-    Still they finish at the correct order: child 1 first and child 2 second
-    
+
+
 
 */

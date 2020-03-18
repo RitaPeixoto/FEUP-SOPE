@@ -1,4 +1,4 @@
-//Programa p2.c
+//Programa p2a.c
 #include <stdio.h> 
 #include <signal.h> 
 #include <unistd.h> 
@@ -8,7 +8,7 @@ void sigint_handler(int signo) {
     sleep(10);   
     printf("Exiting SIGINT handler ...\n");  
 }
-
+ 
 
 int main(void) {  
     struct sigaction action;  
@@ -32,5 +32,6 @@ more signals are being produced these will be ignored and it will only compute t
 b) The process terminates
 ps-u 
 kill <process id>
-
+(not sure about this)but since we have not defined a handler for SIGTERM it will use the UNIX one , which shows the output "Terminated"
+whichs means its doing the default action( slides of signal page 5)
 */

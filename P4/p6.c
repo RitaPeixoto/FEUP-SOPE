@@ -1,1 +1,0 @@
-//Programa p6.c

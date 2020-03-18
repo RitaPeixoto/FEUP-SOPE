@@ -10,8 +10,6 @@ void alarm_handler(int signo){
     pid_t pid; 
     int status;
     pid = wait(&status);
-    
-
 }
 
 int main(int argc, char * argv[]){

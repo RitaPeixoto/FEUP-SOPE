@@ -1,5 +1,4 @@
 //Programa p7.c
-
 #include <unistd.h>
 #include <sys/wait.h>
 #include <stdlib.h>

@@ -1,3 +1,4 @@
+//Program p3a
 #include <stdlib.h>
 #include <stdio.h>
 #define MAXNAMELEN 500 
@@ -11,7 +12,7 @@ int main(int argc, char *argv[]) {
     }   
     fpin = fopen(argv[1], "r");   
     fpout = popen(PAGER, "w"); 
-    while (fgets(names, MAXN    AMELEN, fpin) != NULL)     
+    while (fgets(names, MAXNAMELEN, fpin) != NULL)     
         if(fputs(names, fpout) == EOF)
             printf("fputs error to pipe\n");   
          

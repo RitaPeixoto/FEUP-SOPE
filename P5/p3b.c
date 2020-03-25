@@ -1,7 +1,9 @@
+//Program p3b
 #include <stdlib.h>
 #include <stdio.h>
 #define MAXNAMELEN 500 
 #define PAGER "sort" 
+
 int main(int argc, char *argv[]) { 
     char names[MAXNAMELEN];   
     FILE *fpin, *fpout; 
@@ -9,7 +11,9 @@ int main(int argc, char *argv[]) {
         printf("The function call was not executed correctly\n"); 
         exit(1); 
     }   
-    fpin = fopen(argv[1], "r");   
+    char *arg = "/bin/cat ";
+    strcat(arg, argv[1]);
+    fpin = popen(arg, "r");  
     fpout = popen(PAGER, "w"); 
     while (fgets(names, MAXNAMELEN, fpin) != NULL)     
         if(fputs(names, fpout) == EOF)

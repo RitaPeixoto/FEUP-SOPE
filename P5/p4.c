@@ -38,4 +38,5 @@ int main(int argc, char * argv[]){
         dup(fd1[READ]);
         execlp("sort","sort",NULL);
     }
+    exit(0);
 }

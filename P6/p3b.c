@@ -1,4 +1,4 @@
-// PROGRAMA p03.c 
+// PROGRAMA p03b.c 
 #include <pthread.h> 
 #include <stdio.h> 
 #include <stdlib.h> 

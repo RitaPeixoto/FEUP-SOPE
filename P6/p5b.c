@@ -18,48 +18,46 @@ void *sum(void *arg) {
 void *sub(void *arg) {
     int *aux = (int*)arg;
     void *res = malloc(sizeof(int));
-    *(int*)res = aux[0]+aux[1];
+    *(int*)res = aux[0]-aux[1];
     return res;   
 }
 void *mult(void *arg) {
     int *aux = (int*)arg;
     void *res = malloc(sizeof(int));
-    *(int*)res = aux[0]+aux[1];
+    *(int*)res = aux[0]*aux[1];
     return res;
 }
 void *quo(void *arg) {
     int *aux = (int*)arg;
     void *res = malloc(sizeof(int));
-    *(int*)res = aux[0]+aux[1];
+    *(int*)res = aux[0]/aux[1];
     return res;
 }
 
 
 int main(){
     int args[2];
-    void *sum , *sub, *mult, *quo;
-    pthread_t tsum, tsub, tmult, tdiv;
-
-    printf("Insert two numbers:");
+    pthread_t tsum, tsub, tprod, tquo;
+    
+    printf("Insert two numbers(format:num1 num2):");
     scanf("%d %d", &args[0],&args[1]);
 
-    pthread_create(&tsum,NULL, sum, &args);
-    pthread_create(&tsub,NULL, sub, &args);
-    pthread_create(&tmult,NULL, mult, &args);
-    pthread_create(&tdiv,NULL, quo, &args);
+    pthread_create(&tsum, NULL, sum, &args);
+    pthread_create(&tsub, NULL, sub, &args);
+    pthread_create(&tprod, NULL, mult, &args);
+    pthread_create(&tquo, NULL, quo, &args);
+
+    void * sum, * sub, * mult, * quo;
 
     pthread_join(tsum, &sum);
-    pthread_join(tsub, &sub);   
-    pthread_join(tmult, &mult);
-    pthread_join(tdiv, &quo);
-
+    pthread_join(tsub, &sub);
+    pthread_join(tprod, &mult);
+    pthread_join(tquo, &quo);
 
     printf("%d + %d = %d\n",args[0],args[1],*(int*)sum);
     printf("%d - %d = %d\n",args[0],args[1],*(int*)sub);
     printf("%d * %d = %d\n",args[0],args[1],*(int*)mult);
     printf("%d / %d = %d\n",args[0],args[1],*(int*)quo);
 
-
-
-    pthread_exit(0);
-}
+    return 0;
+}   

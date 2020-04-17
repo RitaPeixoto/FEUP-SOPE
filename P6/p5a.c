@@ -10,43 +10,42 @@ e o resultado de cada operação devem ser apresentados no ecrã pela thread que
 
 void *sum(void *arg) {
     int *aux = (int*)arg;
-    printf("%d + %d = %d\n",aux[0],aux[1],aux[0]+aux[1]);
+    printf("Sum = %d\n",aux[0]+aux[1]);
     return NULL;
 }
 void *sub(void *arg) {
     int *aux = (int*)arg;
-    printf("%d - %d = %d\n",aux[0],aux[1],aux[0]- aux[1]);
+    printf("Sub = %d\n",aux[0]- aux[1]);
     return NULL;   
 }
 void *mult(void *arg) {
     int *aux = (int*)arg;
-    printf("%d * %d = %d\n",aux[0],aux[1],aux[0]*aux[1]);
+    printf("Mult = %d\n",aux[0]*aux[1]);
     return NULL;
 }
 void *quo(void *arg) {
     int *aux = (int*)arg;
-    printf("%d / %d = %d\n",aux[0],aux[1],aux[0]/aux[1]);
+    printf("Quo = %d\n",aux[0]/aux[1]);
     return NULL;
 }
 
 
 int main(){
-    int args[2];
+    int *args =(int*)malloc(sizeof(int)*2);
     pthread_t tsum, tsub, tmult, tquo;
-    void *sum , *sub, *mult, *quo;
 
-    printf("Insert two numbers:");
+    printf("Insert two numbers(format: num1 num2):");
     scanf("%d %d", &args[0],&args[1]);
 
-    pthread_create(&tsum,NULL, sum, &args);
-    pthread_create(&tsub,NULL, sub, &args);
-    pthread_create(&tmult,NULL, mult, &args);
-    pthread_create(&tquo,NULL, quo, &args);
+    pthread_create(&tsum,NULL, sum, (void*)args);
+    pthread_create(&tsub,NULL, sub, (void*)args);
+    pthread_create(&tmult,NULL, mult,(void*)args);
+    pthread_create(&tquo,NULL, quo, (void*)args);
 
-    pthread_join(tsum, &sum);
-    pthread_join(tsub, &sub);
-    pthread_join(tmult, &mult);
-    pthread_join(tquo, &quo);
+    pthread_join(tsum, NULL);
+    pthread_join(tsub, NULL);
+    pthread_join(tmult, NULL);
+    pthread_join(tquo, NULL);
 
     pthread_exit(0);
 }

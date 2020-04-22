@@ -54,3 +54,12 @@ int main(int argc, char *argv[]) {
     pthread_join(tidv, NULL);   // espera thread 'verify'          
     return 0; 
 }
+
+/*
+Várias coisas estão a acontecer quando removemos os mecanismos. 
+Uma dessas coisas é que quando ele faz essa verificação logo no incio da thread, todas as threads vao 
+ter lá um zero quando a verificação acontece (ainda ninguem tinha tido tempo para incrementar)
+Para os incrementos acontece a mesma coisa, quando os programas vao ler a variavel ela ainda tem um 
+valor mais baixo, portanto as threads andam a desperdiçar recursos a tentar incrementar algo que já nao 
+tem aquele valor
+*/

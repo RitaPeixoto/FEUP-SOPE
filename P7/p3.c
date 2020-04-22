@@ -45,6 +45,7 @@ int main(int argc, char *argv[]) {
     int k, nthr, count[MAXTHREADS];   // array para contagens          
     pthread_t tidf[MAXTHREADS], tidv; // tids dos threads         
     int total;         
+    
     if (argc != 3) {                 
         printf("Usage: %s <nr_pos> <nr_thrs>\n",argv[0]);                 
         return 1;         

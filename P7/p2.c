@@ -13,6 +13,7 @@ void * thrfunc(void * arg) {
     void* res = malloc(sizeof(int));
     int value = *(int*) arg;
     char s[5];
+    
     sprintf(s, "%d", value);
     fprintf(stderr, "Starting thread %d\n", value);
     while(N > 0) {

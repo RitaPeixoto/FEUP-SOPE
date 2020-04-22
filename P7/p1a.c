@@ -24,7 +24,8 @@ void *fill(void *nr) {
     } 
 }
 void *verify(void *arg) {         
-    int k;         
+    int k;  
+           
     for (k=0; k<npos; k++)                 
         if (buf[k] != k)   // detecta valores errados                         
             printf("ERROR: buf[%d] = %d\n", k, buf[k]);         
@@ -33,7 +34,8 @@ void *verify(void *arg) {
 int main(int argc, char *argv[]) {         
     int k, nthr, count[MAXTHREADS];   // array para contagens          
     pthread_t tidf[MAXTHREADS], tidv; // tids dos threads         
-    int total;         
+    int total;     
+
     if (argc != 3) {                 
         printf("Usage: %s <nr_pos> <nr_thrs>\n",argv[0]);                 
         return 1;         

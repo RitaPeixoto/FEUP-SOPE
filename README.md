@@ -6,7 +6,7 @@ Resolucao dos exercicios das aulas praticas
 
 Não está feito: 
 
-P7 -
+P7 - 4, 5, 6, 7, 8
 
 P6 - 7,8, 9 ,10
 

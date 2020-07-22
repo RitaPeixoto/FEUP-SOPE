@@ -1,6 +1,6 @@
-#FEUP-SOPE 
+# FEUP-SOPE 
 
-##Sistemas Operativos
+## Sistemas Operativos
 
 Resolução dos exercícios das aulas práticas + Projetos
 

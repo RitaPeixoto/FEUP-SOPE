@@ -1,8 +1,8 @@
 # READ ME
 
-### Classificações
 
-| Nota final do projeto | 14.92 |
-|-----------------------|-------|
-| Parte I (60%)         | 13.8  |
-| Parte II (40%)        | 16.6  |
+### Observações após entrega
+
+* Parte I: Wrong 2LATE+CLOSD logic. String based commands. Uses Alarm. Simple code.
+
+* Parte II: Some late fixes. Paralelism could be optimized. Time counts from 0 and is not integer. Readme does not explain sync.

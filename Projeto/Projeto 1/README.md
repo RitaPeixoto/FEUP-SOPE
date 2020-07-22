@@ -18,6 +18,9 @@ O fork foi realizado em conjunto com o execv.
 
 
 
+## Observações após entrega:
+
+(4) max-depth not considering files in the tree. Some wait errors after CTRL-C. Sending Y does not terminate immediately.
 
 
 

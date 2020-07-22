@@ -1,4 +1,4 @@
-# Projeto 2-Acesso informático aos Quartos de Banho
+# Projeto 2 - Acesso informático aos Quartos de Banho
 
 
 ### Observações após entrega

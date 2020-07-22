@@ -1,4 +1,4 @@
-
+# Praticas
 Resolucao dos exercicios das aulas praticas
 
 Não está feito: 

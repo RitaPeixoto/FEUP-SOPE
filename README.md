@@ -1,17 +1,6 @@
-# SOPE
+#FEUP-SOPE 
 
-2 Ano 2 Semestre
+##Sistemas Operativos
 
-Resolucao dos exercicios das aulas praticas
-
-Não está feito: 
-
-P7 - 4, 5, 6, 7, 8
-
-P6 - 7,8, 9 ,10
-
-P4 - 6
-
-P3 - 12, 11
-
+Resolução dos exercícios das aulas práticas + Projetos
 
